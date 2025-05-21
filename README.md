@@ -17,7 +17,7 @@ A simple blockchain implementation in Go that demonstrates the core concepts of 
 - [How It Works](#how-it-works)
 - [API Reference](#api-reference)
 - [Contributing](#contributing)
-- [License](#license
+- [License](#license)
 
 ## Overview
 
@@ -165,16 +165,18 @@ go run main.go
 ## How It Works
 
 1. **Wallet Creation**:
+
    - Generates a new RSA key pair (2048-bit)
    - Provides methods for transaction signing and verification
 
 2. **Transaction Flow**:
+
    - Sender creates a transaction with recipient and amount
    - Transaction is signed with sender's private key
    - Signature is verified using sender's public key
    - Valid transactions are added to the mempool for mining
 
-3. **Block Creation**: 
+3. **Block Creation**:
    - The program initializes a new blockchain with a genesis block
    - It adds three sample blocks to the chain, each requiring proof-of-work mining
    - Miners compete to find a valid nonce that produces a hash below the target difficulty
